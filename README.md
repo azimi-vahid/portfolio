@@ -24,7 +24,7 @@ Multidisciplinary product designer and front-end developer with strong experienc
 **2018 – Present**
 
 - Designed and finalized major OOH campaigns across Iran, including:
-  - **Sonkalleh billboards**  
+  - **kalleh SignBoards campaign Designer**  
   - **Night King branding and campaign deployment**  
   - Designs for **Zar Macaron**, **Sunstar**, **Mihan**, **Mousavi Jam**, **MazMaz**, **Danette**, **Farmand**, **Sunny Ness**, **Koala**
 - Led product packaging and brand asset development
@@ -42,13 +42,13 @@ Multidisciplinary product designer and front-end developer with strong experienc
 ## 🔹 Featured Projects
 
 - **Night King OOH Campaign:** Full branding concept to outdoor execution
-- **Sonkalleh National Billboard Series:** Design, approval, and deployment
+- **Seven kalleh National Billboard Series:** Design, approval, and deployment
 - **Company Website Builds:** Multiple B2B websites using modern design principles
 
 ---
 
 ## 🔹 Education & Certifications
-(Please insert any formal education or online certificates if available – otherwise we can leave this blank or say *Experience-based Learning*)
+(*Experience-based Learning*)
 
 ---
 
