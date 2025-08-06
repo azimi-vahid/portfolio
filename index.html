@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vahid Azimi | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #fff;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+    header {
+      padding: 6rem 2rem 4rem;
+      text-align: center;
+      animation: fadeInDown 1s ease;
+    }
+    header h1 {
+      font-size: 3.5rem;
+      color: #FFD700;
+      animation: popIn 1.2s ease;
+    }
+    header p {
+      font-size: 1.3rem;
+      margin-top: 1rem;
+      opacity: 0.8;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeInUp 1s ease;
+    }
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: #FFD700;
+      position: relative;
+    }
+    h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #FFD700;
+      margin-top: 8px;
+      border-radius: 5px;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .project {
+      background: #111;
+      border: 1px solid #333;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: zoomIn 0.5s ease;
+    }
+    .project:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #FFD70044;
+    }
+    .project img {
+      width: 100%;
+      display: block;
+    }
+    .project .content {
+      padding: 1rem;
+    }
+    .project .content h3 {
+      color: #FFD700;
+      margin-bottom: 0.5rem;
+    }
+    .contact {
+      text-align: center;
+      animation: fadeInUp 1s ease;
+    }
+    .contact p {
+      margin: 1rem 0;
+    }
+    a {
+      color: #FFD700;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    a:hover {
+      color: #fff200;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #666;
+      background: #111;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes zoomIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    @keyframes popIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Vahid Azimi</h1>
+    <p>Graphic Designer & Front-End Developer</p>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a self-taught designer and developer with years of hands-on experience in outdoor advertising and front-end development. Passionate about blending visual creativity with clean, functional code.</p>
+  </section>
+
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="projects">
+      <div class="project">
+        <img src="https://via.placeholder.com/400x250.png?text=Billboard+Design" alt="Billboard Project" />
+        <div class="content">
+          <h3>Outdoor Ad for Brand X</h3>
+          <p>Designed and executed billboard campaign for a major FMCG brand across Tehran highways.</p>
+        </div>
+      </div>
+      <div class="project">
+        <img src="https://via.placeholder.com/400x250.png?text=Landing+Page" alt="Landing Page" />
+        <div class="content">
+          <h3>Fashion Store Landing Page</h3>
+          <p>Developed a responsive landing page using HTML, CSS, and JavaScript for an online clothing store.</p>
+        </div>
+      </div>
+      <div class="project">
+        <img src="https://via.placeholder.com/400x250.png?text=Poster+Design" alt="Poster" />
+        <div class="content">
+          <h3>Auto Expo Poster</h3>
+          <p>Created a bold and modern poster for a car exhibition with high-impact typography and imagery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:azimitech@gmail.com">azimitech@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/vahidazimi" target="_blank">github.com/vahidazimi</a></p>
+    <p>Instagram: <a href="https://instagram.com/yourhandle" target="_blank">@yourhandle</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Vahid Azimi. All rights reserved.
+  </footer>
+</body>
+</html>
