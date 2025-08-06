@@ -11,221 +11,140 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }
-    body {
       font-family: 'Inter', sans-serif;
-      background: #000;
-      color: #fff;
-      line-height: 1.6;
-      scroll-behavior: smooth;
-    }
-    header {
-      padding: 6rem 2rem 4rem;
-      text-align: center;
-      animation: fadeInDown 1s ease;
-    }
-    header h1 {
-      font-size: 3.5rem;
-      color: #FFD700;
-      animation: popIn 1.2s ease;
-    }
-    header p {
-      font-size: 1.3rem;
-      margin-top: 1rem;
-      opacity: 0.8;
-    }
-    section {
-      padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-      animation: fadeInUp 1s ease;
-    }
-    h2 {
-      font-size: 2.2rem;
-      margin-bottom: 1rem;
-      color: #FFD700;
-      position: relative;
-    }
-    h2::after {
-      content: '';
-      display: block;
-      width: 60px;
-      height: 3px;
-      background: #FFD700;
-      margin-top: 8px;
-      border-radius: 5px;
-    }
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    .project {
-      background: #111;
-      border: 1px solid #333;
-      border-radius: 10px;
-      overflow: hidden;
-      transition: transform 0.3s, box-shadow 0.3s;
-      animation: zoomIn 0.5s ease;
-      cursor: pointer;
-    }
-    .project:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 15px #FFD70044;
-    }
-    .project img {
-      width: 100%;
-      display: block;
-    }
-    .project .content {
-      padding: 1rem;
-    }
-    .project .content h3 {
-      color: #FFD700;
-      margin-bottom: 0.5rem;
-    }
-    .contact {
-      text-align: center;
-      animation: fadeInUp 1s ease;
-    }
-    a {
-      color: #FFD700;
-      text-decoration: none;
-    }
-    a:hover {
-      color: #fff200;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #666;
-      background: #111;
     }
 
-    /* Lightbox */
+    body {
+      background-color: #111;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #000;
+      color: #FFD700;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    section {
+      padding: 4rem 2rem;
+    }
+
+    h2 {
+      color: #FFD700;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .project {
+      background-color: #222;
+      padding: 1rem;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .project:hover {
+      transform: scale(1.03);
+    }
+
+    .project img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+
+    .project h3 {
+      margin-top: 0.5rem;
+    }
+
     .lightbox {
       display: none;
       position: fixed;
-      z-index: 1000;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.8);
+      background: rgba(0, 0, 0, 0.9);
       justify-content: center;
       align-items: center;
     }
+
     .lightbox.show {
       display: flex;
     }
+
     .lightbox img {
       max-width: 90%;
       max-height: 90%;
-      border: 3px solid #FFD700;
-      border-radius: 10px;
     }
 
-    /* Animations */
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
+    .contact a {
+      color: #FFD700;
+      text-decoration: none;
     }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes zoomIn {
-      from { opacity: 0; transform: scale(0.9); }
-      to { opacity: 1; transform: scale(1); }
-    }
-    @keyframes popIn {
-      0% { transform: scale(0.5); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
+
+    footer {
+      background-color: #000;
+      text-align: center;
+      padding: 1rem;
+      color: #888;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Vahid Azimi</h1>
-    <p>Graphic Designer & Front-End Developer</p>
+    <p>Product Designer & Front-End Web Developer</p>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am a self-taught designer and developer with years of hands-on experience in outdoor advertising and front-end development. Passionate about blending visual creativity with clean, functional code.</p>
+  <section id="design">
+    <h2>Product & Advertising Design</h2>
+    <div class="projects">
+      <div class="project"><img src="project1.jpg" alt="Sonkalleh" /><h3>Sonkalleh Billboards</h3></div>
+      <div class="project"><img src="project2.jpg" alt="Night King" /><h3>Night King Branding</h3></div>
+      <div class="project"><img src="project3.jpg" alt="OOH Brands" /><h3>OOH for Zar, SunStar, Mihan...</h3></div>
+    </div>
   </section>
 
-  <section id="portfolio">
-    <h2>Portfolio</h2>
-
-    <h3 style="color:#FFD700; margin-top:2rem;">Outdoor Advertising</h3>
+  <section id="web">
+    <h2>Web Development</h2>
     <div class="projects">
-      <div class="project">
-        <img src="https://cdn.mos.cms.futurecdn.net/oxruAZewVvTmnBnSeQ748a.jpg" alt="Outdoor Ad 1" />
-        <div class="content">
-          <h3>Billboard Campaign for Brand X</h3>
-          <p>Highway billboard design for a major brand in Iran.</p>
-        </div>
-      </div>
-      <div class="project">
-        <img src="https://via.placeholder.com/400x250.png?text=Citylight+Ad" alt="Citylight Ad" />
-        <div class="content">
-          <h3>Citylight Poster</h3>
-          <p>Poster designed for urban installations in busy pedestrian areas.</p>
-        </div>
-      </div>
-      <div class="project">
-        <img src="https://via.placeholder.com/400x250.png?text=Vehicle+Wrap" alt="Vehicle Wrap" />
-        <div class="content">
-          <h3>Vehicle Branding</h3>
-          <p>Creative wrap for a fleet of delivery vans.</p>
-        </div>
-      </div>
-    </div>
-
-    <h3 style="color:#FFD700; margin-top:3rem;">Front-End Development</h3>
-    <div class="projects">
-      <div class="project">
-        <img src="https://via.placeholder.com/400x250.png?text=Landing+Page" alt="Landing Page" />
-        <div class="content">
-          <h3>Fashion Store Landing Page</h3>
-          <p>Responsive landing page using HTML, CSS, and JS.</p>
-        </div>
-      </div>
-      <div class="project">
-        <img src="https://via.placeholder.com/400x250.png?text=Portfolio+Site" alt="Portfolio Site" />
-        <div class="content">
-          <h3>Portfolio Website</h3>
-          <p>This site itself! Showcasing personal and professional work.</p>
-        </div>
-      </div>
-      <div class="project">
-        <img src="https://via.placeholder.com/400x250.png?text=Web+Dashboard" alt="Web Dashboard" />
-        <div class="content">
-          <h3>Admin Dashboard UI</h3>
-          <p>Clean dashboard layout using Flexbox and Grid.</p>
-        </div>
-      </div>
+      <div class="project"><img src="web1.jpg" alt="Nonegah Website" /><h3>Nonegah Co. Website</h3></div>
+      <div class="project"><img src="web2.jpg" alt="Idea Novin" /><h3>Idea Novin</h3></div>
+      <div class="project"><img src="web3.jpg" alt="Zohal Ads" /><h3>Zohal Ads</h3></div>
     </div>
   </section>
 
   <section id="contact" class="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:azimitech@gmail.com">azimitech@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/vahidazimi" target="_blank">github.com/vahidazimi</a></p>
-    <p>Instagram: <a href="https://instagram.com/yourhandle" target="_blank">@yourhandle</a></p>
+    <p>GitHub: <a href="https://github.com/azimi-vahid" target="_blank">github.com/vahidazimi</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/vahid-azimi-86435664" target="_blank">linkedin.com/in/vahid-azimi-86435664</a></p>
   </section>
 
   <footer>
     &copy; 2025 Vahid Azimi. All rights reserved.
   </footer>
 
-  <!-- Lightbox -->
   <div class="lightbox" id="lightbox">
     <img src="" alt="Preview">
   </div>
+
   <script>
     const images = document.querySelectorAll('.project img');
     const lightbox = document.getElementById('lightbox');
