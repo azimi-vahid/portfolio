@@ -18,7 +18,6 @@
       color: #fff;
       line-height: 1.6;
       scroll-behavior: smooth;
-      overflow-x: hidden;
     }
     header {
       padding: 6rem 2rem 4rem;
@@ -69,6 +68,7 @@
       overflow: hidden;
       transition: transform 0.3s, box-shadow 0.3s;
       animation: zoomIn 0.5s ease;
+      cursor: pointer;
     }
     .project:hover {
       transform: scale(1.05);
@@ -89,13 +89,9 @@
       text-align: center;
       animation: fadeInUp 1s ease;
     }
-    .contact p {
-      margin: 1rem 0;
-    }
     a {
       color: #FFD700;
       text-decoration: none;
-      transition: color 0.3s;
     }
     a:hover {
       color: #fff200;
@@ -106,6 +102,29 @@
       font-size: 0.9rem;
       color: #666;
       background: #111;
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox.show {
+      display: flex;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border: 3px solid #FFD700;
+      border-radius: 10px;
     }
 
     /* Animations */
@@ -140,6 +159,7 @@
 
   <section id="portfolio">
     <h2>Portfolio</h2>
+
     <h3 style="color:#FFD700; margin-top:2rem;">Outdoor Advertising</h3>
     <div class="projects">
       <div class="project">
@@ -201,5 +221,26 @@
   <footer>
     &copy; 2025 Vahid Azimi. All rights reserved.
   </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <img src="" alt="Preview">
+  </div>
+  <script>
+    const images = document.querySelectorAll('.project img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.classList.add('show');
+        lightboxImg.src = img.src;
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('show');
+    });
+  </script>
 </body>
 </html>
